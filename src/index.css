@@ -1,0 +1,56 @@
+@import "tailwindcss";
+
+@theme {
+  --color-ink: #2E2126;
+  --color-ink-soft: #6B5560;
+  --color-blush-bg: #F7EEEC;
+  --color-card: #FFFFFF;
+  --color-mauve: #A9808C;
+  --color-mauve-deep: #7A5560;
+  --color-blush: #EFD9D6;
+  --color-copper: #B87A45;
+  --color-copper-deep: #8F5B31;
+  --color-hairline: #E6D6D2;
+  --color-sage: #93A08C;
+
+  --font-display: "Fraunces", Georgia, serif;
+  --font-body: "Inter", -apple-system, sans-serif;
+  --font-mono: "JetBrains Mono", monospace;
+}
+
+html, body, #root {
+  height: 100%;
+}
+
+body {
+  background-color: var(--color-blush-bg);
+  color: var(--color-ink);
+  font-family: var(--font-body);
+  -webkit-font-smoothing: antialiased;
+}
+
+/* subtle grain texture per design spec: kills the "flat SaaS" look */
+.grain {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 1;
+  opacity: 0.035;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+}
+
+.card {
+  background: var(--color-card);
+  border: 1px solid var(--color-hairline);
+  border-radius: 20px;
+  box-shadow: 0 1px 2px rgba(46, 33, 38, 0.05);
+}
+
+.card-copper-shadow {
+  box-shadow: 0 8px 24px rgba(184, 122, 69, 0.14);
+}
+
+::selection {
+  background: var(--color-blush);
+  color: var(--color-ink);
+}
