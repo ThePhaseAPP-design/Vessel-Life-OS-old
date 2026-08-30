@@ -8,10 +8,12 @@ import Budget from './pages/Budget'
 import Calendar from './pages/Calendar'
 import Beauty from './pages/Beauty'
 import Medications from './pages/Medications'
+import Qigong from './pages/Qigong'
 
 const SECTIONS = [
   { key: 'dashboard', label: 'Dashboard' },
   { key: 'routines', label: 'Routines' },
+  { key: 'qigong', label: 'Qigong' },
   { key: 'school', label: 'School' },
   { key: 'work', label: 'Work' },
   { key: 'projects', label: 'Projects' },
@@ -44,6 +46,7 @@ function Shell() {
     switch (active) {
       case 'dashboard': return <Dashboard />
       case 'routines': return <Routines />
+      case 'qigong': return <Qigong />
       case 'school': return <TaskList area="school" label="School" />
       case 'work': return <TaskList area="work" label="Work" />
       case 'projects': return <TaskList area="project" label="Projects" />
