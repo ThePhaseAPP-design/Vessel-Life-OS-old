@@ -62,7 +62,7 @@ export default function Budget() {
         Budget
       </h2>
 
-      <div className="card p-6 text-center card-copper-shadow">
+      <div className="card rise-in p-6 text-center card-copper-shadow">
         <p className="text-[11px] uppercase tracking-[0.1em] text-ink-soft mb-1">Balance</p>
         <p
           className="text-4xl"
@@ -72,7 +72,7 @@ export default function Budget() {
         </p>
       </div>
 
-      <form onSubmit={handleAdd} className="card p-4 space-y-3">
+      <form onSubmit={handleAdd} className="card rise-in p-4 space-y-3">
         <div className="flex gap-2">
           <button type="button" onClick={() => setType('income')} className={`flex-1 py-2 rounded-lg text-sm font-medium border ${type === 'income' ? 'bg-sage text-white border-sage' : 'border-hairline text-sage'}`}>
             Income
@@ -86,7 +86,7 @@ export default function Budget() {
         <button type="submit" className="w-full py-2 rounded-lg bg-copper text-white text-sm font-medium">Add</button>
       </form>
 
-      <div className="card p-2">
+      <div className="card rise-in p-2">
         {entries.length === 0 && <p className="text-sm text-ink-soft text-center py-6">No entries yet.</p>}
         {entries.slice(0, 30).map((e) => (
           <div key={e.id} className="flex items-center justify-between px-3 py-2.5 border-b border-hairline/60 last:border-0">

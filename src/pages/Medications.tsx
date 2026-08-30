@@ -64,7 +64,7 @@ export default function Medications() {
       </div>
 
       {showAdd && (
-        <form onSubmit={handleAdd} className="card p-4 space-y-3">
+        <form onSubmit={handleAdd} className="card rise-in p-4 space-y-3">
           <input
             placeholder="Name"
             value={name}
@@ -92,7 +92,7 @@ export default function Medications() {
       )}
 
       {showImport && (
-        <div className="card p-4 space-y-3">
+        <div className="card rise-in p-4 space-y-3">
           <p className="text-xs text-ink-soft">
             Paste your exported list from SuppCo (or any text list — one supplement per line at minimum).
             We couldn't confirm SuppCo's exact export format, so this parser is forgiving: it'll try to
@@ -134,7 +134,7 @@ export default function Medications() {
         </div>
       )}
 
-      <div className="card p-2">
+      <div className="card rise-in p-2">
         {meds.length === 0 && (
           <p className="text-sm text-ink-soft text-center py-6">Nothing tracked yet.</p>
         )}

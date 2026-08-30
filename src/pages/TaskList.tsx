@@ -33,7 +33,7 @@ export default function TaskList({ area, label }: { area: 'school' | 'work' | 'p
       </h2>
       <p className="text-sm text-ink-soft mb-2">{open.length} open</p>
 
-      <form onSubmit={handleAdd} className="card p-4 flex gap-2 flex-wrap">
+      <form onSubmit={handleAdd} className="card rise-in p-4 flex gap-2 flex-wrap">
         <input
           placeholder="New task"
           value={title}
@@ -60,7 +60,7 @@ export default function TaskList({ area, label }: { area: 'school' | 'work' | 'p
         </button>
       </form>
 
-      <div className="card p-2">
+      <div className="card rise-in p-2">
         {open.length === 0 && <p className="text-sm text-ink-soft text-center py-6">Nothing open.</p>}
         {open.map((t) => (
           <div key={t.id} className="flex items-center gap-3 px-3 py-2.5 border-b border-hairline/60 last:border-0">
@@ -79,7 +79,7 @@ export default function TaskList({ area, label }: { area: 'school' | 'work' | 'p
       </div>
 
       {done.length > 0 && (
-        <details className="card p-3">
+        <details className="card rise-in p-3">
           <summary className="text-xs text-ink-soft cursor-pointer">{done.length} completed</summary>
           <div className="mt-2 space-y-1">
             {done.map((t) => (

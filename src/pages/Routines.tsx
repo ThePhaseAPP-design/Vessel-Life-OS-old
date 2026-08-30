@@ -36,7 +36,7 @@ export default function Routines() {
       <p className="text-sm text-ink-soft mb-4">{categories.length} categories, tended daily.</p>
 
       {categories.map((cat) => (
-        <div key={cat.id} className="card p-5">
+        <div key={cat.id} className="card rise-in p-5">
           <h3 className="text-[13px] uppercase tracking-[0.1em] text-copper mb-3">{cat.name}</h3>
           <div className="space-y-2">
             {cat.items.map((item) => (

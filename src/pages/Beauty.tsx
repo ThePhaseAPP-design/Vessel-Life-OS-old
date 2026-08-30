@@ -88,7 +88,7 @@ export default function Beauty() {
         ))}
       </div>
 
-      <div className="card p-2">
+      <div className="card rise-in p-2">
         {catSteps.length === 0 && <p className="text-sm text-ink-soft text-center py-6">No steps yet for {activeCat}.</p>}
         {catSteps.map((s) => (
           <div key={s.id} className="flex items-center justify-between px-3 py-2.5 border-b border-hairline/60 last:border-0">

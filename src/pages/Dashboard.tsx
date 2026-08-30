@@ -58,18 +58,24 @@ export default function Dashboard() {
   }
 
   return (
-    <div className="max-w-2xl mx-auto px-4 py-8 space-y-8">
-      {/* Moon ring — the centerpiece */}
-      <div className="flex flex-col items-center text-center">
+    <div className="max-w-2xl mx-auto px-4 py-10 space-y-10">
+      {/* Moon ring — the centerpiece, given real room and a slight asymmetric offset */}
+      <div className="flex flex-col items-center text-center rise-in">
         <div
-          className="w-40 h-40 rounded-full flex items-center justify-center card-copper-shadow"
+          className="moon-ring w-52 h-52 rounded-full flex items-center justify-center"
           style={conicStyle}
         >
-          <div className="w-32 h-32 rounded-full bg-blush-bg flex flex-col items-center justify-center">
-            <span className="text-3xl font-light" style={{ fontFamily: 'var(--font-display)' }}>{pct}%</span>
+          <div className="w-[168px] h-[168px] rounded-full bg-blush-bg flex flex-col items-center justify-center">
+            <span
+              className="text-6xl font-light leading-none"
+              style={{ fontFamily: 'var(--font-display)', fontStyle: 'italic', color: 'var(--color-copper-deep)' }}
+            >
+              {pct}
+              <span className="text-2xl align-top">%</span>
+            </span>
           </div>
         </div>
-        <p className="mt-4 text-xl italic text-ink" style={{ fontFamily: 'var(--font-display)' }}>{phaseName}</p>
+        <p className="mt-5 text-2xl italic text-ink" style={{ fontFamily: 'var(--font-display)' }}>{phaseName}</p>
       </div>
 
       {/* Signature strip */}

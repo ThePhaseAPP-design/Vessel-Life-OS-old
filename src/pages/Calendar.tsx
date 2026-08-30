@@ -59,7 +59,7 @@ export default function Calendar() {
         Calendar
       </h2>
 
-      <div className="card p-5">
+      <div className="card rise-in p-5">
         <div className="flex items-center justify-between mb-4">
           <button onClick={() => setViewDate(new Date(year, month - 1, 1))} className="text-copper text-lg px-2">‹</button>
           <p className="text-sm font-medium text-ink">{monthLabel}</p>
@@ -96,7 +96,7 @@ export default function Calendar() {
       </div>
 
       {selected && (
-        <div className="card p-4">
+        <div className="card rise-in p-4">
           <p className="text-sm font-medium text-ink mb-2">{selected}</p>
           {(byDate.get(selected) || []).length === 0 && <p className="text-sm text-ink-soft">Nothing scheduled.</p>}
           {(byDate.get(selected) || []).map((e) => (
